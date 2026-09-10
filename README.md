@@ -37,7 +37,7 @@ npm run build
 npm run test:sites
 ```
 
-The enquiry form is an interactive prototype. It validates required fields and shows the finished state, but it does not send or store submissions yet.
+The enquiry form validates required fields and opens a ready-to-send email in the visitor's email app. It does not store submissions on the website.
 
 ## Deployment
 

@@ -26,7 +26,7 @@
 <nav id="mobile-navigation" class:open aria-label="Mobile navigation">
   <a href="#work" onclick={close}>Work</a>
   <a href="#tools" onclick={close}>What it does</a>
+  <a href="#offers" onclick={close}>Packages</a>
   <a href="#process" onclick={close}>Process</a>
-  <a href="#approach" onclick={close}>Approach</a>
   <button type="button" data-contact-open onclick={close}>Start somewhere</button>
 </nav>
