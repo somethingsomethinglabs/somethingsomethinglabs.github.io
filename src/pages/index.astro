@@ -15,6 +15,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#work">Work</a>
+      <a href="#process">Process</a>
       <a href="#approach">Approach</a>
       <a href="#about">About</a>
       <button type="button" data-contact-open>Contact</button>
@@ -72,6 +73,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         We turn unclear ideas into clear, useful websites using modern tools and human judgement.
       </p>
       <Leaf class="name-leaf" size={150} weight="fill" aria-hidden="true" />
+    </section>
+
+    <section class="process-section" id="process" aria-labelledby="process-title">
+      <header class="process-heading">
+        <div>
+          <p class="section-kicker">How a project starts</p>
+          <h2 id="process-title">Start with some...</h2>
+        </div>
+        <p>
+          You do not need to arrive with the right words. We only need enough to find the next
+          useful step.
+        </p>
+      </header>
+
+      <ol class="process-steps">
+        <li>
+          <span class="process-number" aria-hidden="true">01</span>
+          <h3><span>Some</span>where</h3>
+          <p>Tell us where the business is now and what feels stuck. A messy email is fine.</p>
+        </li>
+        <li>
+          <span class="process-number" aria-hidden="true">02</span>
+          <h3><span>Some</span>thing</h3>
+          <p>Together, we decide what the site needs to do, what belongs in it, and what can wait.</p>
+        </li>
+        <li>
+          <span class="process-number" aria-hidden="true">03</span>
+          <h3><span>Some</span>how</h3>
+          <p>No black box. We design, build, and explain the choices as we go.</p>
+        </li>
+      </ol>
     </section>
 
     <section class="work-section" id="work" aria-labelledby="work-title">
@@ -138,7 +170,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="closing-section" aria-labelledby="closing-title">
       <img class="closing-sun" src="/images/print-sun.png" alt="" width="1254" height="1254" aria-hidden="true" />
       <div>
-        <h2 id="closing-title">Have a website idea?<br />However small.<br /><em>Let's talk.</em></h2>
+        <h2 id="closing-title">Start somewhere.<br />Bring us something rough.<br /><em>We'll work out how.</em></h2>
       </div>
       <div class="closing-actions">
         <button class="button button-primary" type="button" data-contact-open>
@@ -157,6 +189,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p>Websites for small businesses,<br />based in Gippsland, Victoria.</p>
     <nav aria-label="Footer navigation">
       <a href="#work">Work</a>
+      <a href="#process">Process</a>
       <a href="#approach">Approach</a>
       <a href="#about">About</a>
       <button type="button" data-contact-open>Contact</button>
