@@ -273,6 +273,7 @@ img {
   border-radius: 1px;
   padding: 0 26px;
   font-weight: 800;
+  white-space: nowrap;
   cursor: pointer;
   transition: background 180ms ease, transform 180ms ease;
 }
@@ -323,6 +324,7 @@ img {
 
 .hero h1,
 .section-heading h2,
+.tool-heading h2,
 .process-heading h2,
 .approach-section h2,
 .closing-section h2,
@@ -496,6 +498,164 @@ img {
   margin-bottom: -86px;
   color: var(--aubergine);
   transform: rotate(-11deg);
+}
+
+.tool-section {
+  padding: 112px max(32px, calc((100vw - 1320px) / 2));
+  background: var(--paper-deep);
+}
+
+.tool-heading {
+  display: grid;
+  grid-template-columns: 1.05fr 0.75fr;
+  align-items: end;
+  gap: 90px;
+  margin-bottom: 48px;
+}
+
+.tool-heading .section-kicker {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.tool-heading .section-kicker::after {
+  content: '';
+  width: 46px;
+  border-bottom: 2px solid var(--tomato);
+}
+
+.tool-heading h2 {
+  font-size: clamp(51px, 5vw, 76px);
+  line-height: 0.98;
+}
+
+.tool-heading > p {
+  max-width: 470px;
+  margin: 0 0 7px;
+  color: var(--ink-soft);
+  font-size: 20px;
+  line-height: 1.45;
+}
+
+.tool-finder {
+  display: grid;
+  grid-template-columns: 0.78fr 1fr;
+  border-top: 1px solid var(--line-strong);
+  border-bottom: 1px solid var(--line-strong);
+}
+
+.tool-choices {
+  border-right: 1px solid var(--line-strong);
+  padding: 28px 0;
+}
+
+.tool-choices > p {
+  margin: 0;
+  padding: 0 30px 20px;
+  color: var(--ink-soft);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+
+.tool-choices button {
+  width: 100%;
+  min-height: 66px;
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  border: 0;
+  border-top: 1px solid var(--line);
+  padding: 12px 30px;
+  background: transparent;
+  color: var(--aubergine);
+  font-size: 20px;
+  font-weight: 700;
+  text-align: left;
+  cursor: pointer;
+  transition: background 180ms ease, color 180ms ease;
+}
+
+.tool-choices button:last-child {
+  border-bottom: 1px solid var(--line);
+}
+
+.tool-choices button:hover,
+.tool-choices button:focus-visible {
+  background: color-mix(in srgb, var(--aubergine) 8%, transparent);
+}
+
+.tool-choices button[aria-pressed='true'] {
+  background: var(--aubergine);
+  color: var(--ink-on-dark);
+}
+
+.tool-choices button span {
+  flex: 0 0 auto;
+  color: var(--tomato);
+  font-family: var(--font-concept);
+  font-size: 12px;
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 700;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+}
+
+.tool-choices button[aria-pressed='true'] span {
+  color: var(--accent-on-dark);
+}
+
+.tool-result {
+  min-height: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: clamp(42px, 6vw, 82px);
+  background: var(--paper);
+}
+
+.tool-result-kicker {
+  margin: 0 0 22px;
+  color: var(--tomato);
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.17em;
+  text-transform: uppercase;
+}
+
+.tool-result h3 {
+  max-width: 650px;
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: clamp(38px, 4.1vw, 58px);
+  font-weight: 600;
+  letter-spacing: -0.05em;
+  line-height: 1.02;
+}
+
+.tool-result > p:not(.tool-result-kicker) {
+  max-width: 650px;
+  margin: 24px 0 0;
+  color: var(--ink-soft);
+  font-size: 19px;
+  line-height: 1.5;
+}
+
+.tool-result ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 30px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tool-result li {
+  border: 1px solid var(--line-strong);
+  padding: 7px 11px;
+  font-size: 14px;
+  font-weight: 700;
 }
 
 .process-section {
@@ -966,7 +1126,7 @@ img {
   justify-items: start;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1100px) {
   .hero {
     grid-template-columns: 1fr;
   }
@@ -997,6 +1157,10 @@ img {
 
   .process-section {
     padding-top: 90px;
+  }
+
+  .tool-heading {
+    gap: 48px;
   }
 
   .process-heading {
@@ -1136,6 +1300,44 @@ img {
   .work-section {
     width: calc(100% - 40px);
     padding: 76px 0;
+  }
+
+  .tool-section {
+    padding: 76px 20px;
+  }
+
+  .tool-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 38px;
+  }
+
+  .tool-heading h2 {
+    font-size: clamp(44px, 12vw, 58px);
+  }
+
+  .tool-heading > p {
+    font-size: 18px;
+  }
+
+  .tool-finder {
+    grid-template-columns: 1fr;
+  }
+
+  .tool-choices {
+    border-right: 0;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  .tool-choices > p,
+  .tool-choices button {
+    padding-right: 4px;
+    padding-left: 4px;
+  }
+
+  .tool-result {
+    min-height: 0;
+    padding: 42px 4px 48px;
   }
 
   .process-section {

@@ -2,6 +2,7 @@
 import { ArrowBendRightUp, ArrowRight, Leaf, Minus } from 'phosphor-svelte';
 import ContactDialog from '../components/ContactDialog.svelte';
 import MobileNav from '../components/MobileNav.svelte';
+import ToolFinder from '../components/ToolFinder.svelte';
 import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
@@ -15,9 +16,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#work">Work</a>
+      <a href="#tools">What it does</a>
       <a href="#process">Process</a>
       <a href="#approach">Approach</a>
-      <a href="#about">About</a>
       <button type="button" data-contact-open>Contact</button>
     </nav>
 
@@ -30,24 +31,25 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   <main id="top">
     <section class="hero" aria-labelledby="hero-title">
       <div class="hero-copy">
-        <p class="hero-kicker">Websites for small business</p>
+        <p class="hero-kicker">Websites built as business tools</p>
         <h1 id="hero-title">
-          Bring us the<br />half-formed idea.
-          <em>We'll help make<br />it useful.</em>
+          Your website should<br />do more.
+          <em>Put it to work.</em>
         </h1>
         <p class="hero-lede">
-          You do not need a technical brief, a sitemap, or all the answers. Tell us about the
-          business. We'll work out what the website needs to do.
+          We design and build websites that help people understand, calculate, compare, choose,
+          and take the next step. Bring us the business problem. We'll work out what the website
+          should do.
         </p>
         <div class="hero-actions">
           <button class="button button-primary" type="button" data-contact-open>
             Start somewhere <ArrowRight size={18} weight="bold" />
           </button>
-          <a class="text-link" href="#work">See what we make <ArrowRight size={18} /></a>
+          <a class="text-link" href="#tools">See what a site can do <ArrowRight size={18} /></a>
         </div>
         <p class="honest-note">
           <ArrowBendRightUp size={39} weight="regular" aria-hidden="true" />
-          Honestly, "something's not working" is enough to begin.
+          Honestly, "people keep getting stuck here" is enough to begin.
         </p>
       </div>
 
@@ -63,56 +65,39 @@ import BaseLayout from '../layouts/BaseLayout.astro';
       </figure>
     </section>
 
-    <section class="name-story" id="about" aria-labelledby="name-title">
+    <section class="name-story" aria-labelledby="value-title">
       <div>
-        <h2 id="name-title">Why the name?</h2>
-        <p class="name-answer">Because most useful things begin before anyone knows exactly what to call them.</p>
+        <h2 id="value-title">More than a poster.</h2>
+        <p class="name-answer">A good website should help someone do something.</p>
       </div>
       <p class="name-copy">
-        Something Something Labs is a web design and development studio for small businesses.
-        We turn unclear ideas into clear, useful websites using modern tools and human judgement.
+        We start with the business problem, not a page template. The answer might be a calculator,
+        a guided choice, an interactive diagram, a sharper enquiry, or something nobody has named
+        yet.
       </p>
       <Leaf class="name-leaf" size={150} weight="fill" aria-hidden="true" />
     </section>
 
-    <section class="process-section" id="process" aria-labelledby="process-title">
-      <header class="process-heading">
+    <section class="tool-section" id="tools" aria-labelledby="tools-title">
+      <header class="tool-heading">
         <div>
-          <p class="section-kicker">How a project starts</p>
-          <h2 id="process-title">Start with some...</h2>
+          <p class="section-kicker">What could it do?</p>
+          <h2 id="tools-title">Find the useful bit.</h2>
         </div>
         <p>
-          You do not need to arrive with the right words. We only need enough to find the next
-          useful step.
+          Pick the place customers tend to get stuck. Here are a few ways a website could help.
         </p>
       </header>
-
-      <ol class="process-steps">
-        <li>
-          <span class="process-number" aria-hidden="true">01</span>
-          <h3><span>Some</span>where</h3>
-          <p>Tell us where the business is now and what feels stuck. A messy email is fine.</p>
-        </li>
-        <li>
-          <span class="process-number" aria-hidden="true">02</span>
-          <h3><span>Some</span>thing</h3>
-          <p>Together, we decide what the site needs to do, what belongs in it, and what can wait.</p>
-        </li>
-        <li>
-          <span class="process-number" aria-hidden="true">03</span>
-          <h3><span>Some</span>how</h3>
-          <p>No black box. We design, build, and explain the choices as we go.</p>
-        </li>
-      </ol>
+      <ToolFinder client:load />
     </section>
 
     <section class="work-section" id="work" aria-labelledby="work-title">
       <header class="section-heading">
         <div>
           <p class="section-kicker">Selected work</p>
-          <h2 id="work-title">Real businesses.<br />Useful websites.</h2>
+          <h2 id="work-title">Real businesses.<br />Working websites.</h2>
         </div>
-        <p>A couple of recent projects, built to help real businesses do what they do best.</p>
+        <p>Each one starts with what the business needs people to understand, trust, or do.</p>
       </header>
 
       <div class="projects">
@@ -123,7 +108,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="project-meta">
             <div>
               <strong>12Grapes Vineyard Services</strong>
-              <span>Vineyard services, Gippsland Victoria</span>
+              <span>Makes year-round vineyard support easier to understand and enquire about.</span>
             </div>
             <ArrowRight size={24} weight="bold" />
           </div>
@@ -136,12 +121,43 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <div class="project-meta">
             <div>
               <strong>Servo ICT</strong>
-              <span>Websites and technology, built properly</span>
+              <span>Turns a broad technology offer into a clearer path for small-business clients.</span>
             </div>
             <ArrowRight size={24} weight="bold" aria-hidden="true" />
           </div>
         </a>
       </div>
+    </section>
+
+    <section class="process-section" id="process" aria-labelledby="process-title">
+      <header class="process-heading">
+        <div>
+          <p class="section-kicker">How a project starts</p>
+          <h2 id="process-title">Start with some...</h2>
+        </div>
+        <p>
+          You do not need to arrive with a feature list or all the answers. We only need enough
+          to find the next useful step.
+        </p>
+      </header>
+
+      <ol class="process-steps">
+        <li>
+          <span class="process-number" aria-hidden="true">01</span>
+          <h3><span>Some</span>where</h3>
+          <p>Tell us where people get stuck, what the team repeats, or what takes too much time.</p>
+        </li>
+        <li>
+          <span class="process-number" aria-hidden="true">02</span>
+          <h3><span>Some</span>thing</h3>
+          <p>We work out what would help. It might be a page, a calculator, a guide, or a smarter flow.</p>
+        </li>
+        <li>
+          <span class="process-number" aria-hidden="true">03</span>
+          <h3><span>Some</span>how</h3>
+          <p>We design and build it, show you the working version, and explain the choices as we go.</p>
+        </li>
+      </ol>
     </section>
 
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
@@ -153,16 +169,16 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <span class="approach-title-judgement">judgement.</span>
         </h2>
         <p>
-          We use AI where it saves time, but a person still asks the questions, makes the design
-          decisions, reviews the code, and takes responsibility for the result. Your business is
-          not a template.
+          Modern tools let us build ideas that once sat outside a small-business budget. We use AI
+          where it makes the result quicker or more useful. A person still asks the questions,
+          makes the design decisions, reviews the code, and takes responsibility for the result.
         </p>
       </div>
       <ul class="approach-list">
-        <li><Minus size={20} weight="bold" /> Web design and development</li>
-        <li><Minus size={20} weight="bold" /> Clear, honest communication</li>
-        <li><Minus size={20} weight="bold" /> Practical advice for small business</li>
-        <li><Minus size={20} weight="bold" /> Support when you need it</li>
+        <li><Minus size={20} weight="bold" /> Start with the business problem</li>
+        <li><Minus size={20} weight="bold" /> Make complex things easier to grasp</li>
+        <li><Minus size={20} weight="bold" /> Build the useful interaction</li>
+        <li><Minus size={20} weight="bold" /> Keep a person responsible</li>
       </ul>
       <p class="approach-note">Same neighbourhood.<br />Different ideas.<br />That's the point.</p>
     </section>
@@ -170,13 +186,13 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="closing-section" aria-labelledby="closing-title">
       <img class="closing-sun" src="/images/print-sun.png" alt="" width="1254" height="1254" aria-hidden="true" />
       <div>
-        <h2 id="closing-title">Start somewhere.<br />Bring us something rough.<br /><em>We'll work out how.</em></h2>
+        <h2 id="closing-title">Where do people get stuck?<br /><em>Let's build something that helps.</em></h2>
       </div>
       <div class="closing-actions">
         <button class="button button-primary" type="button" data-contact-open>
           Start somewhere <ArrowRight size={18} weight="bold" />
         </button>
-        <a class="text-link" href="#work">See what we make <ArrowRight size={18} /></a>
+        <a class="text-link" href="#tools">See what a site can do <ArrowRight size={18} /></a>
       </div>
       <Leaf class="closing-leaf" size={128} weight="fill" aria-hidden="true" />
     </section>
@@ -189,9 +205,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <p>Websites for small businesses,<br />based in Gippsland, Victoria.</p>
     <nav aria-label="Footer navigation">
       <a href="#work">Work</a>
+      <a href="#tools">What it does</a>
       <a href="#process">Process</a>
       <a href="#approach">Approach</a>
-      <a href="#about">About</a>
       <button type="button" data-contact-open>Contact</button>
     </nav>
   </footer>

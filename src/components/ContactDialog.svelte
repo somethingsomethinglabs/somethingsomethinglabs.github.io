@@ -36,8 +36,8 @@
   {:else}
     <div class="dialog-heading">
       <p class="section-kicker">Start somewhere</p>
-      <h2 id="contact-title">Tell us the rough version.</h2>
-      <p>You do not need a brief. A few plain sentences about the business and what is not working will do.</p>
+      <h2 id="contact-title">Where do people get stuck?</h2>
+      <p>You do not need a feature list. Tell us what customers ask, avoid, misunderstand, or spend too long working out.</p>
     </div>
 
     <form onsubmit={submit}>
@@ -56,12 +56,12 @@
         <input name="business" autocomplete="organization" />
       </label>
       <label>
-        <span>What is the rough idea?</span>
-        <textarea name="idea" rows="5" required placeholder="Something is not working, we need a new site, we are not sure where to start..."></textarea>
+        <span>What should be easier?</span>
+        <textarea name="idea" rows="5" required placeholder="Customers keep asking for a price, our service is hard to explain, people do not know which option fits..."></textarea>
       </label>
       <p class="prototype-note">This is a working mock-up. It does not send or store your details.</p>
       <button class="button button-primary" type="submit">
-        Send the rough idea <ArrowRight size={18} weight="bold" />
+        Send the rough version <ArrowRight size={18} weight="bold" />
       </button>
     </form>
   {/if}
