@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.DS_Store
+
+# Local design review material and agent instructions.
+AGENTS.md
+design-qa.md
+design-evidence/

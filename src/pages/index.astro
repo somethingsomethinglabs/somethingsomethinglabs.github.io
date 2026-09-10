@@ -1,0 +1,163 @@
+---
+import { ArrowBendRightUp, ArrowRight, Leaf, Minus } from 'phosphor-svelte';
+import ContactDialog from '../components/ContactDialog.svelte';
+import MobileNav from '../components/MobileNav.svelte';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout>
+  <header class="site-header">
+    <a class="wordmark" href="#top" aria-label="Something Something Labs home">
+      <span>Something</span>
+      <span>Something</span>
+      <span>Labs</span>
+    </a>
+
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <button type="button" data-contact-open>Contact</button>
+    </nav>
+
+    <button class="button button-primary header-cta" type="button" data-contact-open>
+      Start somewhere <ArrowRight size={18} weight="bold" />
+    </button>
+    <MobileNav client:load />
+  </header>
+
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <p class="hero-kicker">Websites for small business</p>
+        <h1 id="hero-title">
+          Bring us the<br />half-formed idea.
+          <em>We'll help make<br />it useful.</em>
+        </h1>
+        <p class="hero-lede">
+          You do not need a technical brief, a sitemap, or all the answers. Tell us about the
+          business. We'll work out what the website needs to do.
+        </p>
+        <div class="hero-actions">
+          <button class="button button-primary" type="button" data-contact-open>
+            Start somewhere <ArrowRight size={18} weight="bold" />
+          </button>
+          <a class="text-link" href="#work">See what we make <ArrowRight size={18} /></a>
+        </div>
+        <p class="honest-note">
+          <ArrowBendRightUp size={39} weight="regular" aria-hidden="true" />
+          Honestly, "something's not working" is enough to begin.
+        </p>
+      </div>
+
+      <figure class="hero-image">
+        <img class="hero-sun" src="/images/print-sun.png" alt="" width="1254" height="1254" aria-hidden="true" />
+        <img
+          class="hero-photo"
+          src="/images/hero-workbench.png"
+          alt="A laptop displaying the 12Grapes vineyard website in a warm studio workspace"
+          width="1536"
+          height="1024"
+        />
+      </figure>
+    </section>
+
+    <section class="name-story" id="about" aria-labelledby="name-title">
+      <div>
+        <h2 id="name-title">Why the name?</h2>
+        <p class="name-answer">Because most useful things begin before anyone knows exactly what to call them.</p>
+      </div>
+      <p class="name-copy">
+        Something Something Labs is a web design and development studio for small businesses.
+        We turn unclear ideas into clear, useful websites using modern tools and human judgement.
+      </p>
+      <Leaf class="name-leaf" size={150} weight="fill" aria-hidden="true" />
+    </section>
+
+    <section class="work-section" id="work" aria-labelledby="work-title">
+      <header class="section-heading">
+        <div>
+          <p class="section-kicker">Selected work</p>
+          <h2 id="work-title">Real businesses.<br />Useful websites.</h2>
+        </div>
+        <p>A couple of recent projects, built to help real businesses do what they do best.</p>
+      </header>
+
+      <div class="projects">
+        <a class="project" href="https://somethingsomethinglabs.github.io/website-12Grapes/" target="_blank" rel="noreferrer">
+          <div class="project-image">
+            <img src="/images/12grapes-home.jpg" alt="12Grapes Vineyard Services website home page" width="1425" height="891" loading="lazy" />
+          </div>
+          <div class="project-meta">
+            <div>
+              <strong>12Grapes Vineyard Services</strong>
+              <span>Vineyard services, Gippsland Victoria</span>
+            </div>
+            <ArrowRight size={24} weight="bold" />
+          </div>
+        </a>
+
+        <a class="project" href="https://servoict.com/" target="_blank" rel="noreferrer">
+          <div class="project-image project-image-servo">
+            <img src="/images/servo-ict.jpg" alt="Servo ICT website project artwork" width="1200" height="630" loading="lazy" />
+          </div>
+          <div class="project-meta">
+            <div>
+              <strong>Servo ICT</strong>
+              <span>Websites and technology, built properly</span>
+            </div>
+            <ArrowRight size={24} weight="bold" aria-hidden="true" />
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="approach-section" id="approach" aria-labelledby="approach-title">
+      <div class="approach-copy">
+        <p class="section-kicker section-kicker-light">Our approach</p>
+        <h2 id="approach-title">Modern tools.<br />Human judgement.</h2>
+        <p>
+          We use AI where it saves time, but a person still asks the questions, makes the design
+          decisions, reviews the code, and takes responsibility for the result. Your business is
+          not a template.
+        </p>
+      </div>
+      <ul class="approach-list">
+        <li><Minus size={20} weight="bold" /> Web design and development</li>
+        <li><Minus size={20} weight="bold" /> Clear, honest communication</li>
+        <li><Minus size={20} weight="bold" /> Practical advice for small business</li>
+        <li><Minus size={20} weight="bold" /> Support when you need it</li>
+      </ul>
+      <p class="approach-note">Same neighbourhood.<br />Different ideas.<br />That's the point.</p>
+    </section>
+
+    <section class="closing-section" aria-labelledby="closing-title">
+      <img class="closing-sun" src="/images/print-sun.png" alt="" width="1254" height="1254" aria-hidden="true" />
+      <div>
+        <h2 id="closing-title">Have a website idea?<br />However small.<br /><em>Let's talk.</em></h2>
+      </div>
+      <div class="closing-actions">
+        <button class="button button-primary" type="button" data-contact-open>
+          Start somewhere <ArrowRight size={18} weight="bold" />
+        </button>
+        <a class="text-link" href="#work">See what we make <ArrowRight size={18} /></a>
+      </div>
+      <Leaf class="closing-leaf" size={128} weight="fill" aria-hidden="true" />
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="wordmark wordmark-small" href="#top" aria-label="Something Something Labs home">
+      <span>Something</span><span>Something</span><span>Labs</span>
+    </a>
+    <p>Websites for small businesses,<br />based in Gippsland, Victoria.</p>
+    <nav aria-label="Footer navigation">
+      <a href="#work">Work</a>
+      <a href="#approach">Approach</a>
+      <a href="#about">About</a>
+      <button type="button" data-contact-open>Contact</button>
+    </nav>
+  </footer>
+
+  <ContactDialog client:load />
+</BaseLayout>

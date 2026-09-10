@@ -1,0 +1,58 @@
+---
+import '@fontsource-variable/lora';
+import '@fontsource/alegreya-sans/400.css';
+import '@fontsource/alegreya-sans/400-italic.css';
+import '@fontsource/alegreya-sans/500.css';
+import '@fontsource/alegreya-sans/700.css';
+import '@fontsource/alegreya-sans/800.css';
+import '../styles/global.css';
+
+interface Props {
+  title?: string;
+  description?: string;
+}
+
+const {
+  title = 'Something Something Labs | Websites for small business',
+  description = 'Friendly web design and development for small businesses. Bring the half-formed idea and we will help make it useful.',
+} = Astro.props;
+---
+
+<!doctype html>
+<html lang="en-AU">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content={description} />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="theme-color" content="#f6f0e6" />
+    <script is:inline>
+      (() => {
+        const themeColours = {
+          1: '#f6f0e6',
+          2: '#f2f0e4',
+          3: '#f1f4f2',
+          4: '#f7eff2',
+          5: '#f2f0ea',
+        };
+        const requestedPalette = new URLSearchParams(window.location.search).get('palette');
+        const palette = requestedPalette && requestedPalette in themeColours ? requestedPalette : '1';
+
+        document.documentElement.dataset.palette = palette;
+        document.querySelector('meta[name="theme-color"]')?.setAttribute('content', themeColours[palette]);
+      })();
+    </script>
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:image" content="/images/hero-workbench.png" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={title} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content="/images/hero-workbench.png" />
+    <title>{title}</title>
+  </head>
+  <body>
+    <slot />
+  </body>
+</html>
