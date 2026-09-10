@@ -115,7 +115,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="approach-section" id="approach" aria-labelledby="approach-title">
       <div class="approach-copy">
         <p class="section-kicker section-kicker-light">Our approach</p>
-        <h2 id="approach-title">Modern tools.<br />Human judgement.</h2>
+        <h2 id="approach-title" class="approach-title" aria-label="Modern tools. Human judgement.">
+          <span class="approach-title-tools">Modern tools.</span>
+          <span class="approach-title-human">Human</span>
+          <span class="approach-title-judgement">judgement.</span>
+        </h2>
         <p>
           We use AI where it saves time, but a person still asks the questions, makes the design
           decisions, reviews the code, and takes responsibility for the result. Your business is
