@@ -80,12 +80,12 @@
         <input name="business" autocomplete="organization" />
       </label>
       <label>
-        <span>Which package are you considering?</span>
+        <span>Which payment route are you considering?</span>
         <select name="project" bind:value={selectedPackage}>
           <option>Not sure yet</option>
-          <option>Essential website</option>
-          <option>Business website</option>
-          <option>Something outside these packages</option>
+          <option>Build and handover</option>
+          <option>Managed website</option>
+          <option>Something outside this scope</option>
         </select>
       </label>
       <label>

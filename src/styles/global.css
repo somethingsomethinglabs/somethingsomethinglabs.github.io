@@ -703,6 +703,38 @@ img {
   border: 1px solid var(--line-strong);
 }
 
+.pricing-truth {
+  display: grid;
+  grid-template-columns: 0.55fr 1.45fr;
+  gap: 48px;
+  border-top: 1px solid var(--line-strong);
+  border-right: 1px solid var(--line-strong);
+  border-left: 1px solid var(--line-strong);
+  padding: 24px clamp(32px, 4vw, 54px);
+  background: var(--paper-deep);
+}
+
+.pricing-truth p {
+  margin: 0;
+}
+
+.pricing-truth-kicker {
+  color: var(--tomato);
+  font-family: var(--font-concept);
+  font-size: 13px;
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 750;
+  font-weight: 750;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.pricing-truth p:last-child {
+  max-width: 760px;
+  color: var(--ink-soft);
+  font-size: 18px;
+  line-height: 1.45;
+}
+
 .offer-card {
   display: flex;
   flex-direction: column;
@@ -715,7 +747,22 @@ img {
 }
 
 .offer-card-featured {
+  position: relative;
   background: var(--apricot);
+}
+
+.offer-badge {
+  align-self: flex-start;
+  margin: 0 0 20px;
+  border: 1px solid currentColor;
+  padding: 6px 9px 5px;
+  color: var(--tomato);
+  font-family: var(--font-concept);
+  font-size: 11px;
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 750;
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
 }
 
 .offer-card-heading {
@@ -776,6 +823,27 @@ img {
   text-align: right;
 }
 
+.managed-price {
+  flex: 0 0 auto;
+  text-align: right;
+}
+
+.offer-price-monthly {
+  margin: 12px 0 0;
+  color: var(--ink);
+  font-family: var(--font-concept);
+  font-size: 20px;
+  font-variation-settings: 'MONO' 1, 'CASL' 0, 'wght' 700;
+  font-weight: 700;
+}
+
+.offer-price-monthly span {
+  color: var(--ink-soft);
+  font-family: var(--font-body);
+  font-size: 0.72em;
+  font-weight: 700;
+}
+
 .offer-summary {
   max-width: 570px;
   margin: 30px 0 8px;
@@ -809,6 +877,13 @@ img {
 .offer-card .button {
   align-self: flex-start;
   margin-top: auto;
+}
+
+.managed-breakdown {
+  margin: -14px 0 24px;
+  color: var(--ink-soft);
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .offer-details {
@@ -1582,8 +1657,13 @@ img {
 
   .offer-grid,
   .offer-details,
-  .care-strip {
+  .care-strip,
+  .pricing-truth {
     grid-template-columns: 1fr;
+  }
+
+  .pricing-truth {
+    gap: 12px;
   }
 
   .offer-card + .offer-card,
@@ -1597,6 +1677,10 @@ img {
   }
 
   .offer-price small {
+    text-align: left;
+  }
+
+  .managed-price {
     text-align: left;
   }
 

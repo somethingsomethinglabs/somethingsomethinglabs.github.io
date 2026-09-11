@@ -17,7 +17,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <nav class="desktop-nav" aria-label="Main navigation">
       <a href="#work">Work</a>
       <a href="#tools">What it does</a>
-      <a href="#offers">Packages</a>
+      <a href="#offers">Ways to pay</a>
       <a href="#process">Process</a>
       <button type="button" data-contact-open>Contact</button>
     </nav>
@@ -45,11 +45,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
           <button class="button button-primary" type="button" data-contact-open>
             Start somewhere <ArrowRight size={18} weight="bold" />
           </button>
-          <a class="text-link" href="#offers">See the packages <ArrowRight size={18} /></a>
+          <a class="text-link" href="#offers">See the two ways to pay <ArrowRight size={18} /></a>
         </div>
         <p class="honest-note">
           <ArrowBendRightUp size={39} weight="regular" aria-hidden="true" />
-          Honestly, "people keep getting stuck here" is enough to begin.
+          Somewhere to start: $1,490 upfront, then $299 a month for 24 months with care included.
         </p>
       </div>
 
@@ -132,83 +132,96 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <section class="offers-section" id="offers" aria-labelledby="offers-title">
       <header class="offers-heading">
         <div>
-          <p class="section-kicker">Two clear ways to begin</p>
-          <h2 id="offers-title">Choose the size.<br />Know what's included.</h2>
+          <p class="section-kicker">A smaller way to start</p>
+          <h2 id="offers-title">Same website.<br />Two ways to pay.</h2>
         </div>
         <p>
-          Fixed-scope websites for established service businesses around Moe, Morwell and
-          Traralgon. You approve the scope and total before a production slot is booked.
+          Pay for the build outright, or begin with a smaller payment and have us look after the
+          site while you pay it off. The work and agreed scope stay the same.
         </p>
       </header>
+
+      <div class="pricing-truth">
+        <p class="pricing-truth-kicker">The useful difference</p>
+        <p>
+          Squarespace supports its software. We support the business using the website. That
+          means a person who knows the project can make changes, check the enquiry path and help
+          the site keep earning its place.
+        </p>
+      </div>
 
       <div class="offer-grid">
         <article class="offer-card">
           <div class="offer-card-heading">
             <div>
               <p class="offer-number">01</p>
-              <h3>Essential website</h3>
+              <h3>Build + handover</h3>
             </div>
-            <p class="offer-price"><span>$</span>1,490 <small>AUD</small></p>
+            <p class="offer-price"><span>$</span>6,500 <small>AUD · FROM</small></p>
           </div>
-          <p class="offer-summary">A complete one-page site for a business with a straightforward offer.</p>
+          <p class="offer-summary">Own the finished site and choose whether we stay involved.</p>
           <ul>
-            <li>One page with up to seven sections</li>
-            <li>Services and service area</li>
-            <li>Your supplied photos and reviews</li>
-            <li>Working enquiry form</li>
-            <li>Mobile layout and basic search setup</li>
+            <li>Business and content workshop</li>
+            <li>Custom structure, writing and visual direction</li>
+            <li>One focused interactive feature in the agreed scope</li>
+            <li>Smarter enquiry flow, analytics and search setup</li>
+            <li>Testing, launch, training and source handover</li>
           </ul>
-          <button class="button button-primary" type="button" data-contact-open data-contact-package="Essential website">
-            Ask about Essential <ArrowRight size={18} weight="bold" />
+          <button class="button button-primary" type="button" data-contact-open data-contact-package="Build and handover">
+            Ask about buying outright <ArrowRight size={18} weight="bold" />
           </button>
         </article>
 
         <article class="offer-card offer-card-featured">
+          <p class="offer-badge">Lower upfront cost</p>
           <div class="offer-card-heading">
             <div>
               <p class="offer-number">02</p>
-              <h3>Business website</h3>
+              <h3>Managed website</h3>
             </div>
-            <p class="offer-price"><span>$</span>2,690 <small>AUD</small></p>
+            <div class="managed-price">
+              <p class="offer-price"><span>$</span>1,490 <small>AUD TO START</small></p>
+              <p class="offer-price-monthly">+ $299 <span>a month</span></p>
+            </div>
           </div>
-          <p class="offer-summary">More room to explain services, prove the work and guide better enquiries.</p>
+          <p class="offer-summary">The same website, with the build cost spread out and care included.</p>
           <ul>
-            <li>Up to five pages</li>
-            <li>Clearer service descriptions</li>
-            <li>Project or gallery content</li>
-            <li>Working enquiry form</li>
-            <li>Mobile layout and basic search setup</li>
+            <li>The same agreed discovery, design and build</li>
+            <li>Managed hosting, monitoring and backups</li>
+            <li>Scheduled enquiry-form checks</li>
+            <li>Up to 30 minutes of small changes each month</li>
+            <li>A practical site review every three months</li>
           </ul>
-          <button class="button button-primary" type="button" data-contact-open data-contact-package="Business website">
-            Ask about Business <ArrowRight size={18} weight="bold" />
+          <p class="managed-breakdown">24 monthly payments from launch. $8,666 total including the initial payment.</p>
+          <button class="button button-primary" type="button" data-contact-open data-contact-package="Managed website">
+            Start with $1,490 <ArrowRight size={18} weight="bold" />
           </button>
         </article>
       </div>
 
       <div class="offer-details">
         <div>
-          <p class="offer-detail-label">Included in both</p>
-          <p>A structured content interview, writing from your supplied facts, one design direction, two consolidated revision rounds, domain connection, testing and handover.</p>
+          <p class="offer-detail-label">One scope, not a cut-down version</p>
+          <p>We agree what the site needs to do before quoting. Both payment routes cover the same written scope, revision limits and finished website. The managed option is lower upfront, not lower total.</p>
         </div>
         <div>
-          <p class="offer-detail-label">Timing and payments</p>
-          <p>Allow two to three weeks once the interview, required material and first payment are complete. You nominate one decision-maker and send consolidated feedback. Payments are 40% to book, 40% at first review and 20% before launch.</p>
+          <p class="offer-detail-label">What happens after month 24?</p>
+          <p>Choose a clean handover to hosting you control, or keep limited care for $89 a month. Your domain and business accounts stay in your name throughout.</p>
         </div>
       </div>
 
       <aside class="care-strip" aria-label="Optional website care">
         <div>
-          <p class="section-kicker">After launch</p>
-          <h3>Care when you want it. A clean handover when you don't.</h3>
+          <p class="section-kicker">Something should keep working</p>
+          <h3>Support for the business, not only the software.</h3>
         </div>
-        <p><strong>$89 a month</strong> covers hosting, monitoring, recoverable backups, a scheduled form check and up to 30 minutes of small content changes. Unused time does not roll over, and larger changes are quoted first. Domains and business email stay separate and in your name. You can also take the site to your own hosting.</p>
+        <p>When a service changes or an enquiry dries up, you have someone to call who already understands the site. Managed clients get small changes and regular checks during the 24-month term. Outright clients can add limited care for <strong>$89 a month</strong>.</p>
       </aside>
 
       <p class="scope-note">
-        Online shops, customer accounts, custom booking systems, integrations and bespoke
-        calculators need their own quote. Prices are in AUD. If GST applies, your written quote
-        will show it and the total payable. The proposal also sets out timing, delays and
-        cancellation terms before you book.
+        Online shops, customer accounts, complex booking systems, integrations and larger
+        data-backed tools need their own quote. Prices are in AUD. If GST applies, your written
+        proposal will show it, the full payment schedule and the total payable before you book.
       </p>
     </section>
 
@@ -290,7 +303,7 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <nav aria-label="Footer navigation">
       <a href="#work">Work</a>
       <a href="#tools">What it does</a>
-      <a href="#offers">Packages</a>
+      <a href="#offers">Ways to pay</a>
       <a href="#process">Process</a>
       <button type="button" data-contact-open>Contact</button>
     </nav>
